@@ -1,7 +1,7 @@
 // @ts-nocheck
 import axios from 'axios'
 import type { Method, AxiosRequestConfig, AxiosResponse } from 'axios'
-import { notification } from 'antd'
+import { Notify } from '@nutui/nutui-react'
 
 const fetch = <R>(
   url: string,
@@ -79,7 +79,7 @@ const fetch = <R>(
 
       if (status === 401) {
         await new Promise<void>((resolve) => {
-          notification.error({ message: data?.msg ?? '鉴权过期，请重新登录！' })
+          Notify.warn({ message: data?.msg ?? '鉴权过期，请重新登录！' })
           setTimeout(() => {
             resolve()
           }, 2000)

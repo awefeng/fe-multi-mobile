@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+import { Button } from '@nutui/nutui-react'
 import { FC, Fragment } from 'react'
 import styles from './index.less'
 import { Link, Outlet, useNavigate } from 'react-router-dom'

@@ -1,5 +1,5 @@
 import { FC, Fragment } from 'react'
-import { Button } from 'antd'
+import { Button } from '@nutui/nutui-react'
 import { useAuth } from '@/utils/auth'
 import { useLocation, useNavigate } from 'react-router-dom'
 
@@ -14,7 +14,7 @@ const Login: FC = () => {
     <Fragment>
       <h2>欢迎登录</h2>
       <Button
-        type='primary'
+        type={'primary'}
         onClick={() => {
           signIn()
           navigate(from)

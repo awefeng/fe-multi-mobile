@@ -1,7 +1,7 @@
 import { FC, Fragment, useState } from 'react'
 import { pop, push } from './minHeap'
 import type { Heap } from './minHeap'
-import { Button, message } from 'antd'
+import { Button, Notify } from '@nutui/nutui-react'
 
 const KeyTest: FC = () => {
   const [heap, setHeap] = useState<Heap>([])
@@ -10,7 +10,7 @@ const KeyTest: FC = () => {
     const first = pop(temp)
 
     if (first) {
-      message.success(`推出了sortIndex:${first.sortIndex},id: ${first.id}`)
+      Notify.success(`推出了sortIndex:${first.sortIndex},id: ${first.id}`)
     }
 
     debugger

@@ -1,5 +1,4 @@
 import React, { FC, Fragment, Suspense } from 'react'
-import { Spin } from 'antd'
 import { RouteProps } from '@/types/routes'
 import { matchRoutes, Navigate, useLocation } from 'react-router-dom'
 import { useAuth } from '@/utils/auth'
@@ -11,18 +10,7 @@ export function lazyLoad(
   Comp: React.LazyExoticComponent<any>
 ): React.ReactNode {
   return (
-    <Suspense
-      fallback={
-        <Spin
-          size='large'
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        />
-      }
-    >
+    <Suspense fallback={<div></div>}>
       <Comp />
     </Suspense>
   )
