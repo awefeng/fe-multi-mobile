@@ -1,6 +1,6 @@
 import { lazy } from 'react'
 import { USER_ROLE_ENUM } from '@/constants/user'
-import { RouteProps } from '@/types/routes'
+import type { RouteProps } from '@/types/routes'
 import { Navigate, Outlet } from 'react-router-dom'
 import { lazyLoad } from './index'
 
@@ -15,16 +15,16 @@ const routes: RouteProps[] = [
         element: lazyLoad(lazy(() => import('@/views/welcome')))
       },
       {
+        path: 'layout',
+        element: lazyLoad(lazy(() => import('@/views/intro/layout')))
+      },
+      {
+        path: 'components',
+        element: lazyLoad(lazy(() => import('@/views/intro/components')))
+      },
+      {
         path: 'login',
         element: lazyLoad(lazy(() => import('@/views/login')))
-      },
-      {
-        path: 'key-test',
-        element: lazyLoad(lazy(() => import('@/views/keyTest')))
-      },
-      {
-        path: 'min-heap',
-        element: lazyLoad(lazy(() => import('@/views/minHeap')))
       },
       {
         path: 'settings',

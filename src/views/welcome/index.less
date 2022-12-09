@@ -1,3 +1,27 @@
 .welcome{
-  background: red;
+  background: #b6aec9;
+}
+
+.gridContainer{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 33.33%);
+  gap: 1px;
+  .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+    text-align: center;
+    color: #235d5d;
+    background: #ffffff;
+    .title{
+      font-size: 8px;
+      font-size: #666666;
+    }
+    .icon {
+      font-size: 24px;
+    }
+  }
 }
