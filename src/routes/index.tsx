@@ -1,14 +1,13 @@
-import React, { FC, Fragment, Suspense } from 'react'
-import { RouteProps } from '@/types/routes'
+import { Fragment, Suspense } from 'react'
+import type { FC, ReactNode, LazyExoticComponent } from 'react'
+import type { RouteProps } from '@/types/routes'
 import { matchRoutes, Navigate, useLocation } from 'react-router-dom'
 import { useAuth } from '@/utils/auth'
 import store from '@/store'
 import routes from './config'
 
 // 懒加载
-export function lazyLoad(
-  Comp: React.LazyExoticComponent<any>
-): React.ReactNode {
+export function lazyLoad(Comp: LazyExoticComponent<any>): ReactNode {
   return (
     <Suspense fallback={<div></div>}>
       <Comp />

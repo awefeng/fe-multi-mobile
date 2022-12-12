@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 
 const NotFound: FC = () => {
   return <h1>404了 NotFound</h1>

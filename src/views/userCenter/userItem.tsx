@@ -1,4 +1,5 @@
-import { FC, useEffect } from 'react'
+import { useEffect } from 'react'
+import type { FC } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getInvoices } from './data'
 

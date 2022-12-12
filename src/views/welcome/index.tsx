@@ -1,4 +1,5 @@
-import { FC, Fragment } from 'react'
+import { Fragment } from 'react'
+import type { FC } from 'react'
 import styles from './index.less'
 import { BlockOutlined, LayoutOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
