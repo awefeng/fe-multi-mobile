@@ -1,7 +1,8 @@
 import { USER_ROLE_ENUM } from '@/constants/user'
 import { useAuth } from '@/utils/auth'
 import { Button } from 'zarm'
-import { FC, Fragment } from 'react'
+import { Fragment } from 'react'
+import type { FC } from 'react'
 import { useTypedSelector } from '@/store'
 
 const Setting: FC = () => {

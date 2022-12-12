@@ -1,4 +1,5 @@
-import { FC, Fragment } from 'react'
+import { Fragment } from 'react'
+import type { FC } from 'react'
 import { Button } from 'zarm'
 import { useAuth } from '@/utils/auth'
 import { useLocation, useNavigate } from 'react-router-dom'
