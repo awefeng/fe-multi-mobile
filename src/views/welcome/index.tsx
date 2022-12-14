@@ -1,13 +1,17 @@
 import { Fragment } from 'react'
 import type { FC } from 'react'
 import styles from './index.less'
-import { BlockOutlined, LayoutOutlined } from '@ant-design/icons'
+import {
+  BlockOutlined,
+  LayoutOutlined,
+  CodeSandboxOutlined
+} from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 
 const IntroArr = [
   { name: 'UI组件', to: '/components', icon: <BlockOutlined /> },
-
-  { name: 'UI适配', to: '/layout', icon: <LayoutOutlined /> }
+  { name: 'UI适配', to: '/layout', icon: <LayoutOutlined /> },
+  { name: '多端检测', to: '/multi', icon: <CodeSandboxOutlined /> }
 ]
 const Welcome: FC = () => {
   const navigate = useNavigate()
