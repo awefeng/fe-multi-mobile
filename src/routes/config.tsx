@@ -23,6 +23,10 @@ const routes: RouteProps[] = [
         element: lazyLoad(lazy(() => import('@/views/intro/components')))
       },
       {
+        path: 'multi',
+        element: lazyLoad(lazy(() => import('@/views/intro/multi')))
+      },
+      {
         path: 'login',
         element: lazyLoad(lazy(() => import('@/views/login')))
       },
