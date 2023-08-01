@@ -1,60 +1,44 @@
-import {
-  isAndroid,
-  isIOS,
-  isMobile,
-  isDesktop,
-  isTablet,
-  isBrowser,
-  getUA
-} from 'react-device-detect'
+// 第一种检测方法
+// import {
+//   isAndroid,
+//   isIOS,
+//   isMobile,
+//   isDesktop,
+//   isTablet,
+//   isBrowser,
+//   getUA
+// } from 'react-device-detect'
 
-function isAppPlatform() {
-  return Math.random() < 0.5
+// 第二种检测方法
+// see API https://faisalman.github.io/ua-parser-js-docs/v2/api/ua-parser-js/overview.html
+import { UAParser, UAParserInstance } from 'ua-parser-js'
+
+let parser: UAParserInstance
+
+// OS TYPE
+let isAndroid = false
+
+const isIOS = false
+// DEVICE TYPE
+const isMobile = false
+const isTablet = false
+// PLATFORM TYPE
+const isDesktop = false
+const isBrowser = false
+const uaInit = () => {
+  parser = new UAParser()
+  const os = parser.getOS()
+
+  isAndroid = os.name === 'Android'
 }
-
-function isWxPlatform() {
-  return /micromessenger/i.test(getUA)
-}
-
-const isApp = isAppPlatform()
-const isWx = isWxPlatform()
-/**
-function isWxPlatform() {
-  return new Promise((resolve) => {
-    // windows phone没有micromessenger
-    if (/micromessenger/i.test(getUA)) {
-      resolve(true)
-      return
-    }
-    if (
-      window.WeixinJSBridge &&
-      typeof window.WeixinJSBridge.invoke == 'function'
-    ) {
-      resolve(true)
-      return
-    }
-
-    if (document.addEventListener) {
-      document.addEventListener('WeixinJSBridgeReady', function () {
-        resolve(true)
-        return
-      })
-    }
-
-    resolve(false)
-    return
-  })
-}
- */
 
 export {
+  uaInit,
   isAndroid,
   isIOS,
   isMobile,
   isTablet,
   isDesktop,
-  isApp,
   isBrowser,
-  isWx,
-  getUA as UA
+  parser
 }

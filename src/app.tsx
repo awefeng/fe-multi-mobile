@@ -9,9 +9,10 @@ import { RouterAuth, screenRoutesByRole } from '@/routes/index'
 import { cloneDeep } from 'lodash'
 import 'zarm/dist/zarm.css'
 import { remInit } from '@/utils/rem'
+import { uaInit } from '@/utils/multi'
 
 remInit()
-
+uaInit()
 const App: FC = () => {
   const { role } = store.getState().user
   const curRoutes = useMemo(() => {

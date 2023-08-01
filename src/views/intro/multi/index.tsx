@@ -1,14 +1,5 @@
 import { FC, Fragment } from 'react'
-import {
-  isAndroid,
-  isIOS,
-  isMobile,
-  isWx,
-  isDesktop,
-  isApp,
-  UA,
-  isBrowser
-} from '@/utils/multi'
+import { isAndroid, isIOS, isMobile, isDesktop, isBrowser } from '@/utils/multi'
 
 const IntroMulti: FC = () => {
   return (
@@ -25,14 +16,14 @@ const IntroMulti: FC = () => {
         <li>isAndroid: {String(isAndroid)}</li>
         <li>isIOS: {String(isIOS)}</li>
         <li>isMobile: {String(isMobile)}</li>
-        <li>isWx: {String(isWx)}</li>
+        <li>isWx: {String(false)}</li>
         <li>isDesktop: {String(isDesktop)}</li>
         <li>isBrowser: {String(isBrowser)}</li>
-        <li>isAPP: 需要APP的JsBridge支持检测能力 - {String(isApp)}</li>
+        <li>isAPP: 需要APP的JsBridge支持检测能力 - {String(false)}</li>
       </ul>
       <br />
       ---------
-      {isAndroid && isMobile && isWx && (
+      {isAndroid && isMobile && true && (
         <div>当前文本只在安卓+手机+微信环境显示</div>
       )}
     </Fragment>

@@ -7,7 +7,7 @@ const setRem = () => {
   const DOCUMENT_FONT_SIZE =
     postCssConfig.plugins['postcss-pxtorem']?.rootValue ??
     DEFAULT_DOCUMENT_FONT_SIZE
-  const MAX_SUPPORT_SCALE = 4
+  const MAX_SUPPORT_SCALE = 2
   const scale = document.documentElement.clientWidth / THE_UI_DESIGN_SIZE
   const size = DOCUMENT_FONT_SIZE * Math.min(scale, MAX_SUPPORT_SCALE)
 
