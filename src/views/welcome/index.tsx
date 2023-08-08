@@ -11,7 +11,8 @@ import { useNavigate } from 'react-router-dom'
 const IntroArr = [
   { name: 'UI组件', to: '/components', icon: <BlockOutlined /> },
   { name: 'UI适配', to: '/layout', icon: <LayoutOutlined /> },
-  { name: '多端检测', to: '/multi', icon: <CodeSandboxOutlined /> }
+  { name: '多端检测', to: '/multi', icon: <CodeSandboxOutlined /> },
+  { name: '函数组件和类组件', to: '/react-comp', icon: <CodeSandboxOutlined /> }
 ]
 const Welcome: FC = () => {
   const navigate = useNavigate()
